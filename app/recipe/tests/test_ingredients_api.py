@@ -3,8 +3,6 @@ Tests for the ingredients API.
 """
 from decimal import Decimal
 
-from decimal import Decimal
-
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 from django.test import TestCase
