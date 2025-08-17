@@ -1,21 +1,59 @@
-# Recipe App API Project
+# Recipe App API
 
-## Description
-This project was created using Python and the Django REST Framework alongside Docker. The API allows users to create and update user profiles, upload and store images, and create, filter, and search for objects.
+A RESTful API for a recipe management application built with Python, Django REST Framework, and Docker. This project allows users to manage recipes, ingredients, and tags, complete with user authentication and image uploads.
 
-### Steps to Run
-1. Clone the repository
-2. Run docker-compose up in the command line
-3. In your browser go to - http://127.0.0.1:8000/api/docs/
-4. Once in the Swagger UI follow the below steps to create and authenticate a user
-5. Scroll down to User -> api/user/create -> Click Try it out
-    1. Enter the requested information -> Execute
-    2. Below in api/user/token -> Click Try it out
-    3. Enter credentials created above and you'll receive a token
-    4. Copy that token and scroll to the top -> Click Authorize
-    5. Scroll down to the third option "tokenAuth" and type the work Token followed by a space, then paste your token code
-        1. It is important to add a space after the word token or else it will not authorize
-      
-    6. Click Authorize and close the window, you're all set!
-6. You're now free to use the API to Get, Put, Patch, or Delete: ingredients, recipes, images, and tags
-7. Have fun and enjoy!
+---
+
+## ✨ Key Features
+
+* **User Authentication:** Secure user creation and token-based authentication (JWT).
+* **Recipe Management:** Full CRUD (Create, Read, Update, Delete) functionality for recipes.
+* **Ingredient & Tag System:** Create and assign ingredients and tags to recipes for easy filtering and organization.
+* **Image Uploads:** Attach images to recipes to provide a rich user experience.
+* **API Documentation:** Interactive API documentation powered by Swagger UI.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Backend:** Python, Django REST Framework
+* **Database:** PostgreSQL
+* **Containerization:** Docker, Docker Compose
+* **API Testing & Docs:** Swagger UI
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Docker and Docker Compose must be installed on your local machine.
+
+### Installation & Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [YOUR_REPOSITORY_URL]
+    cd [your-repository-folder]
+    ```
+
+2.  **Run the application with Docker Compose:**
+    ```bash
+    docker-compose up
+    ```
+
+3.  **Access the API Documentation:**
+    * Navigate to `http://127.0.0.1:8000/api/docs/` in your web browser.
+
+### Using the API
+
+Once the application is running, you can use the interactive Swagger UI to test the endpoints:
+
+1.  **Create a User:** Navigate to `POST /api/user/create/`, enter your details, and execute.
+2.  **Retrieve an Auth Token:** Go to `POST /api/user/token/`, enter your new user credentials to receive an authentication token.
+3.  **Authorize Your Session:**
+    * Click the **Authorize** button at the top of the page.
+    * In the `tokenAuth` field, enter `Token YOUR_TOKEN_HERE` (making sure to include the word "Token" and a space before the token).
+    * Click **Authorize**.
+
+You are now authenticated and can explore all the API's features!
